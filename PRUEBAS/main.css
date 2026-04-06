@@ -1,0 +1,93 @@
+/* Configuración General */
+:root {
+    --primary-color: #5e9eff;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --dark-footer: #212529;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Comportamiento de desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header / Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+}
+
+/* Menú Lateral (Sticky) */
+.sticky-top {
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.list-group-item a {
+    transition: var(--transition);
+}
+
+.list-group-item a:hover {
+    color: var(--primary-color) !important;
+    padding-left: 5px;
+}
+
+/* Tarjetas de los Temas (Steps) */
+.step-card {
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.step-card h2 {
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Imágenes de los Temas */
+.step-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid #dee2e6;
+}
+
+/* Footer Custom */
+footer {
+    border-top: 4px solid var(--primary-color);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 30px;
+    }
+}

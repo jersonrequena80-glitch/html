@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Papeleria Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light custom-header-bg">
+            <div class="container-fluid">
+                <img src="https://img.freepik.com/vector-premium/jd-linked-logo-identidad-empresarial-empresa-creative-letter-jd-logo-vector_754537-451.jpg" height="60" alt="Logo" class="me-2">
+                <a class="navbar-brand custom-logo-color" href="#">Papelería Online</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Libretas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Bolígrafos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Manualidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ofertas-section">Ofertas</a></li> <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-secondary me-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle"></i> Iniciar Sesión
+                        </button>
+                        <button class="btn btn-outline-secondary me-2" type="button"><i class="bi bi-search"></i></button>
+                        <button class="btn btn-primary position-relative" type="button" data-bs-toggle="modal" data-bs-target="#cartModal" id="cart-button">
+                            <i class="bi bi-cart"></i> 
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger visually-hidden" id="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container my-5">
+        
+        <section class="p-5 mb-4 bg-light rounded-3 custom-jumbotron-bg">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold text-white">¡Despierta tu Creatividad!</h1>
+                <p class="col-md-8 fs-4 text-white">Hasta 30% de descuento en la colección de otoño. ¡Compra ahora!</p>
+                <button class="btn btn-dark btn-lg" type="button" onclick="location.href='#ofertas-section'">Ver Ofertas</button>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2 class="text-center mb-4 custom-title-color">✨ Productos Destacados</h2>
+            
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="featured-products">
+                
+                <div class="col">
+                    
+                    <div class="card h-100 shadow-sm product-card" data-product-id="1" data-product-name="Cuaderno A5 'Dreams'" data-product-price="8500" data-product-image="https://via.placeholder.com/400x300/FADADD/808080?text=Cuaderno+Pastel">
+                        <img src="https://th.bing.com/th/id/OIP.9v0b6A13MwDNBNQsCFhZLAHaHa?w=191&h=191&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Cuaderno Pastel">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cuaderno ecológico A5</h5>
+                            <p class="card-text text-muted">Colección 'ecológico'</p>
+                            <p class="fw-bold custom-price-color">$8.500</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-product-id="1">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm product-card" data-product-id="2" data-product-name="Set Bolígrafos Gel x12" data-product-price="15000" data-product-image="https://via.placeholder.com/400x300/B0E0E6/808080?text=Set+Bolígrafos+Gel">
+                        <img src="https://ae01.alicdn.com/kf/S24602d544a054515a1e1967f5ca9afba8/Bol-grafo-de-Gel-l-quido-recto-de-tinta-de-12-colores-bol-grafo-de-rodillo.jpg_Q90.jpg_.webp" class="card-img-top" alt="Set Bolígrafos Gel">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Set Bolígrafos Gel x12</h5>
+                            <p class="card-text text-muted">12 colores vibrantes</p>
+                            <p class="fw-bold custom-price-color">$15.000</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-product-id="2">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm product-card" data-product-id="3" data-product-name="Washi Tapes Pack x5" data-product-price="6200" data-product-image="https://via.placeholder.com/400x300/98FB98/808080?text=Washi+Tape+Floral">
+                        <img src="https://th.bing.com/th/id/OIP.KhL1JVYb-SxPSrjljCmkoQHaHa?w=202&h=202&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Washi Tape Floral">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Washi Tapes Pack x5</h5>
+                            <p class="card-text text-muted">Pack x5 diseños</p>
+                            <p class="fw-bold custom-price-color">$6.200</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-product-id="3">Añadir al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+        <section id="ofertas-section">
+            <h2 class="text-center mb-4 custom-title-color">🔥 Ofertas Exclusivas de Temporada</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-6">
+                    <div class="card mb-3 custom-offer-card shadow-lg">
+                        <div class="row g-2">
+                            <div class="col-md-4">
+                                <img src="https://tse2.mm.bing.net/th/id/OIP.aFZ_TgWbXT87O0B73ggFrAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid rounded-start h-100 object-fit-cover" alt="Pack Ahorro">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger mb-2">-30% HOY</span>
+                                    <h5 class="card-title">Super Pack Escolar</h5>
+                                    <p class="card-text">Libreta, bolígrafos, y pegamento por un precio increíble.</p>
+                                    <p class="fw-bold"><del class="text-muted me-2">$45.000</del><span class="text-success fs-4">$31.500</span></p>
+                                    <button class="btn btn-primary add-to-cart-btn" data-product-id="1">Añadir al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card mb-3 custom-offer-card shadow-lg">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_885251-MLM72365397510_102023-O.webp" class="img-fluid rounded-start h-100 object-fit-cover" alt="Set Acuarelas">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <span class="badge bg-danger mb-2">¡Últimas Unidades!</span>
+                                    <h5 class="card-title">Set Acuarelas Profesionales</h5>
+                                    <p class="card-text">24 colores de alta pigmentación para artistas.</p>
+                                    <p class="fw-bold"><del class="text-muted me-2">$75.000</del><span class="text-success fs-4">$60.000</span></p>
+                                    <button class="btn btn-primary add-to-cart-btn" data-product-id="1">Añadir al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header custom-header-bg">
+                    <h5 class="modal-title custom-logo-color" id="cartModalLabel"><i class="bi bi-cart me-2"></i> Tu Carrito de Compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items-container">
+                        <p class="text-center text-muted" id="cart-empty-message">Tu carrito está vacío. ¡Empieza a crear!</p>
+                    </div>
+                    
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">Total:</h4>
+                        <h4 class="fw-bold custom-price-color" id="cart-total">$0</h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" class="btn btn-primary" id="checkout-btn">Finalizar Compra y Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header custom-header-bg">
+                    <h5 class="modal-title custom-logo-color" id="loginModalLabel"><i class="bi bi-person-circle me-2"></i> Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="correoelectronico@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Ingresar</button>
+                    </form>
+                    
+                    <div class="text-center my-3">
+                        <span class="text-muted">o ingresa con</span>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" type="button"><i class="bi bi-google me-2"></i> Google</button>
+                        <button class="btn btn-outline-primary" type="button"><i class="bi bi-facebook me-2"></i> Facebook</button>
+                    </div>
+                    
+                    <hr>
+                    <p class="text-center">¿No tienes cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header custom-header-bg">
+                    <h5 class="modal-title custom-logo-color" id="registerModalLabel"><i class="bi bi-pencil-square me-2"></i> Crear Cuenta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="regName" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="regName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="regLastName" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="regLastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regCedula" class="form-label">Número de Cédula</label>
+                            <input type="text" class="form-control" id="regCedula" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regDOB" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="regDOB" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="regEmail" placeholder="tu.correo@ejemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="regPassword" placeholder="********" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Registrar</button>
+                    </form>
+                    
+                    <div class="text-center my-3">
+                        <span class="text-muted">o regístrate con</span>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" type="button"><i class="bi bi-google me-2"></i> Google</button>
+                        <button class="btn btn-outline-primary" type="button"><i class="bi bi-facebook me-2"></i> Facebook</button>
+                    </div>
+
+                    <hr>
+                    <p class="text-center">¿Ya tienes cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Inicia Sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header custom-header-bg">
+                    <h5 class="modal-title custom-logo-color" id="checkoutModalLabel"><i class="bi bi-credit-card-2-back me-2"></i> Finalizar Compra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold">Resumen del Pedido</h6>
+                    <div id="checkout-summary" class="border p-3 mb-3 rounded">
+                        </div>
+                    
+                    <h6 class="fw-bold mt-4">Método de Pago</h6>
+                    <form>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                            <label class="form-check-label" for="creditCard"><i class="bi bi-credit-card me-2"></i> Tarjeta de Crédito/Débito</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                            <label class="form-check-label" for="paypal"><i class="bi bi-paypal me-2"></i> PayPal</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="transfer">
+                            <label class="form-check-label" for="transfer"><i class="bi bi-bank me-2"></i> Transferencia Bancaria</label>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Nombre en la Tarjeta</label>
+                            <input type="text" class="form-control" id="cardName" required>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-primary btn-lg" id="pay-now-btn">Pagar <span id="payment-amount">$0</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold custom-logo-color">Papelería Online</h5>
+                    <p>Tu tienda online para desatar la creatividad. Productos de calidad y diseño.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Productos</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Libretas</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Manualidades</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Accesorios</a></p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Ayuda</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Mi Cuenta</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Políticas de Envío</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Devoluciones</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
+                    <p><i class="bi bi-house-door me-3"></i> Cra 12 # 34-56, Ciudad Creativa</p>
+                    <p><i class="bi bi-envelope me-3"></i> info@papeleriaonline.com</p>
+                    <p><i class="bi bi-phone me-3"></i> +57 300 123 4567</p>
+                    <div class="mt-4">
+                        <a href="https://www.facebook.com/" class="text-white me-4"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-4"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white me-4"><i class="bi bi-twitter fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="mb-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">© 2025 Papelería Online. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
