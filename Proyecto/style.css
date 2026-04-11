@@ -1,7 +1,7 @@
 /* Paleta de Colores: Definición de Variables CSS */
 :root {
-    --color-primary: #117bec; /* Violeta/Morado (Acento Brillante) */
-    --color-secondary: #24619e; /* Rosa Pastel (Base de Creatividad) */
+    --color-primary: #007bff; /* Violeta/Morado (Acento Brillante) */
+    --color-secondary: #dceaf8; /* Rosa Pastel (Base de Creatividad) */
     --color-accent: #e93939; /* Tomate (Acento de Oferta/Peligro) */
     --color-text: #000000;
     --color-light: #b2d5f8;
